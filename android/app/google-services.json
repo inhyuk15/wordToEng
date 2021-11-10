@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "711934053411",
+    "project_id": "wordtoeng",
+    "storage_bucket": "wordtoeng.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711934053411:android:d4e7ed2845614869b1f596",
+        "android_client_info": {
+          "package_name": "com.worktoeng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711934053411-pfp88qri9uud1o2jf6e4uh23ohjm2s3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNKdtvBkGWGu-Ye2i4IYm4yynis12zQ5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711934053411-pfp88qri9uud1o2jf6e4uh23ohjm2s3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

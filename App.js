@@ -1,17 +1,18 @@
 import React from 'react';
 import type {Node} from 'react';
 import Container from './src/Container';
-import { Provider } from 'react-redux';
-import createStore from 'redux';
 import {View, Text} from 'react-native';
-// const store = createStore();
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from "redux";
+import rootReducer from './src/components/reducer';
+
+const store = createStore(rootReducer);
 
 const App = () =>{
   return(
-  // <Provider store = {store}>
-  <Container />
-  
-  // </Provider>
+    <Provider store = {store}>
+      <Container />
+    </Provider>
   );
 }
 

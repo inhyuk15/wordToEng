@@ -3,8 +3,12 @@ import { View, Text, TouchableOpacity,
 styleSheet, containerStyle, TextInput, Button} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { firebase } from '@react-native-firebase/auth';
+import { useDispatch } from 'react-redux';
+import {setId, setName} from './userInfo';
+
 
 const Login = ({navigation})=>{
+  const dispatch = useDispatch();
 // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
@@ -54,12 +58,23 @@ const Login = ({navigation})=>{
         .then((user) => {
             // console.log(`Login with user : ${JSON.stringify(user)}`);
             console.log("로그인 성공");
-            alert('환영합니다');
-            setAuthenticated(true);
-            goHomepage({navigation});
+ 
+            const reg = /^(.+)/;
+            if(reg.test(typedEmail)){
+                const id = typedEmail.replace(/@.+/, '');
+                console.log("로그인 성공");
+                dispatch(setId(id));
+                alert(`환영합니다!  ${id} 님`);
+                setAuthenticated(true);
+                goHomepage({navigation});
+            }
+            else{
+                alert("이메일 형식이 잘못되었습니다.");
+            }
+            
         }).catch((error) => {
             console.log(`Login fail with error: ${error}`);
-            alert("로그인 실패");
+            alert(`로그인 실패   ${error}`);
         });
   }
 
@@ -169,6 +184,9 @@ const Login = ({navigation})=>{
 
                 <TouchableOpacity
                     onPress ={()=> onAnonymousLogin()}
+                    // onPress= {()=>{
+                    //     console.log("??");
+                    // }}
                     style = {{backgroundColor: '#eee', padding :5, margin : 5}}
                 >
                     <Text style ={{textAlign: 'center'}}>익명으로 로그인</Text>
