@@ -17,9 +17,11 @@ const Home = ({navigation})=>{
             tabBarItemStyle: { width: 70,  },
           }}
           initialRouteName="StudyPage"
+          headerLeft
         >
             <Tab.Screen name="MainPage" component={MainPage} 
-                options={{ title: '홈' }}
+                options={{ title: '홈', 
+                }}
             />
             <Tab.Screen name="StudyPage" component={StudyPage} 
                 options={{ title: '학습' }}

@@ -38,25 +38,30 @@ function LogoTitle() {
 
 const Container = () =>{
     return(
-        <NavigationContainer>
+        <NavigationContainer
+        >
         <Stack.Navigator
-          initialRouteName='Home'
+          initialRouteName='Login'
+          screenOptions={{
+            headerTitle:null,
+          }}
         >
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen
             name="Home"
             component={Home}
             options={{
-              // title: '말트영'
-              headerTitle: (props) => <LogoTitle />
+              headerTitle: (props) => <LogoTitle />,
+              headerBackVisible: false
             }}
+            
           />
           <Stack.Screen
             name="OnClickPage"
             component={OnClickPage}
             options={{
-              // title: '말트영'
-              headerTitle: (props) => <Text>영어 발음 공부하기</Text>
+              headerShown: false,
+              headerBackVisible: false
             }}
           />
         </Stack.Navigator>

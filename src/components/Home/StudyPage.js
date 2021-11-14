@@ -25,8 +25,8 @@ import { ScrollView} from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   other:{fontSize:15, fontWeight:'bold', padding : 3,},
-  blue:{fontSize:15, fontWeight:'bold', padding : 3, color: 'powderblue'},
-  orange:{fontSize:15, fontWeight:'bold', padding : 3, color:'orange'},
+  blue:{fontSize:15, fontWeight:'bold', padding : 3, color: '#088F8F'},
+  orange:{fontSize:15, fontWeight:'bold', padding : 3, color:'#088F8F'},
   bold:{fontSize:15, fontWeight:'bold', padding : 3, color : 'black', },
 });
 
@@ -86,14 +86,14 @@ const StudyPage = ({navigation}) => {
                 <Text style = {{textAlign: 'center'}}>영화</Text>
             </TouchableOpacity>
           </View>
-          <View style = {{width : '100%', flex : 7}}>
-            
+          <View style = {{width : '100%', flex : 7,}}>
               <ScrollView horizontal={true} style ={{flex:1}}>
               <TouchableOpacity onPress = {()=>{
                 navigation.navigate('OnClickPage');
-              }}>
+              }}
+              >
                   <Image source={mov4} style={{margin : 5, padding : 5,
-                  width : 125, height : 75}}/>
+                  width : 165, height : 75}}/>
                   <Text>윌터의 상상은 현실이 된다.</Text>
                   <Text>I was on my way to ...</Text>
                 </TouchableOpacity>
@@ -101,7 +101,7 @@ const StudyPage = ({navigation}) => {
                   navigation.navigate('OnClickPage');
                 }}>
                   <Image source={mov1} style={{margin : 5, padding : 5,
-                  width : 125, height : 75}}/>
+                  width : 165, height : 75}}/>
                   <Text>인셉션</Text>
                   <Text>You must not be afraid to ...</Text>
                 </TouchableOpacity>
@@ -111,7 +111,7 @@ const StudyPage = ({navigation}) => {
                 navigation.navigate('OnClickPage');
               }}>
                   <Image source={mov2} style={{margin : 5,
-                  width : 125, height : 75}}/>
+                  width : 165, height : 75}}/>
                   <Text>윌터의 상상은 현실이 된다.</Text>
                   <Text>The only thing we have ...</Text>
                 </TouchableOpacity>
@@ -119,7 +119,7 @@ const StudyPage = ({navigation}) => {
                   navigation.navigate('OnClickPage');
                 }}>
                   <Image source={mov3} style={{margin : 5,
-                  width : 125, height : 75,}}/>
+                  width : 165, height : 75,}}/>
                   <Text>인셉션</Text>
                   <Text>The only thing we have ...</Text>
                 </TouchableOpacity>

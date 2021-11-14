@@ -15,8 +15,8 @@ import mv6 from '../../../assets/mv6.png';
 
 const styles = StyleSheet.create({
   other:{fontSize:18, fontWeight:'bold', padding : 3,},
-  blue:{fontSize:15, fontWeight:'bold', padding : 3, color: 'powderblue'},
-  orange:{fontSize:15, fontWeight:'bold', padding : 3, color:'orange'},
+  blue:{fontSize:15, fontWeight:'bold', padding : 3, color: '#088F8F'},
+  orange:{fontSize:15, fontWeight:'bold', padding : 3, color:'#088F8F'},
   bold:{fontSize:15, fontWeight:'bold', padding : 3, color : 'black', },
   container: {
     flex: 1,
