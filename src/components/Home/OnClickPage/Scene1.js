@@ -5,6 +5,13 @@ import st2 from '../../../../assets/st2.png';
 import mike from '../../../../assets/mike.png';
 import voice1 from '../../../../assets/voice1.png';
 import voice2 from '../../../../assets/voice2.png';
+import vid from '../../../../assets/vid.mp4';
+import fore from '../../../../assets/fore.png';
+
+import VideoPlayer from 'react-native-video-player';
+
+
+
 const imageSize = 120;
 const styles = StyleSheet.create({
     other:{fontSize:15, fontWeight:'bold', padding : 3,},
@@ -82,8 +89,17 @@ const Scene1 = ()=>{
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',
          }}>
-            <Image source={st1} style={{margin : 3, width: 300, height: 200,
-            }}/>
+            {/* <Image source={st1} style={{margin : 3, width: 300, height: 200,
+            }}/> */}
+            <VideoPlayer
+                video={vid}
+                thumbnail={fore}
+                style={{margin : 3, width: 300, height: 200,
+                }}
+                autoplay={false}
+                disableFullscreen={true}
+                disableControlsAutoHide = {true}
+            />
             <View style ={{flex: 2}}>
                 <Text style ={{
                     backgroundColor: '#bbb'
